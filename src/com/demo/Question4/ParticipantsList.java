@@ -1,7 +1,7 @@
 package com.demo.Question4;
 
 import com.demo.Question4.Participants.Participant;
-import com.demo.Question4.Prizes.Award;
+import com.demo.Question4.Awards.Award;
 
 import java.util.ArrayList;
 

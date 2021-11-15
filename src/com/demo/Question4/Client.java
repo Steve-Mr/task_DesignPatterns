@@ -3,9 +3,13 @@ package com.demo.Question4;
 import com.demo.Question4.Participants.Participant;
 import com.demo.Question4.Participants.Student;
 import com.demo.Question4.Participants.Teacher;
-import com.demo.Question4.Prizes.Award;
-import com.demo.Question4.Prizes.researchAward;
-import com.demo.Question4.Prizes.teachingAward;
+import com.demo.Question4.Awards.Award;
+import com.demo.Question4.Awards.researchAward;
+import com.demo.Question4.Awards.teachingAward;
+import com.demo.Question4.Util.XMLUtil;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Client {
 
@@ -28,7 +32,7 @@ public class Client {
         award = new researchAward();
         participantsList.accept(award);
 
-        award = new teachingAward();
+        award = (Award)XMLUtil.getBean();
         participantsList.accept(award);
 
     }

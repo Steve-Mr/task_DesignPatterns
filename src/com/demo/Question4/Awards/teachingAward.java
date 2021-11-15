@@ -1,4 +1,4 @@
-package com.demo.Question4.Prizes;
+package com.demo.Question4.Awards;
 
 import com.demo.Question4.Participants.Student;
 import com.demo.Question4.Participants.Teacher;

@@ -1,6 +1,6 @@
 package com.demo.Question4.Participants;
 
-import com.demo.Question4.Prizes.Award;
+import com.demo.Question4.Awards.Award;
 
 public class Student implements Participant{
     private String name;

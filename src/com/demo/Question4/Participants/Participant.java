@@ -1,7 +1,7 @@
 package com.demo.Question4.Participants;
 
-import com.demo.Question4.Prizes.Award;
+import com.demo.Question4.Awards.Award;
 
 public interface Participant {
-    public void accept(Award judge);
+    void accept(Award judge);
 }
