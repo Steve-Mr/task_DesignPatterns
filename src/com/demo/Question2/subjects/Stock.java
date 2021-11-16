@@ -14,32 +14,14 @@ public abstract class Stock {
     protected boolean FLAG = true;
     protected double percent;
 
+    /*
+     * peak: 极值点（极大和极小）
+     * pre_price：上一次输入价格
+     * FLAG: true 上升趋势，false 下降趋势
+     */
+
     public Stock(String stockName) {
         this.stockName = stockName;
-    }
-
-    public void setStockName(String stockName){
-        this.stockName = stockName;
-    }
-
-    public double getPeak() {
-        return peak;
-    }
-
-    public void setPeak(double peak) {
-        this.peak = peak;
-    }
-
-    public double getPre_price() {
-        return pre_price;
-    }
-
-    public void setPre_price(double pre_price) {
-        this.pre_price = pre_price;
-    }
-
-    public String getStockName(){
-        return this.stockName;
     }
 
     public void setPrice(double price){
@@ -50,10 +32,12 @@ public abstract class Stock {
         return this.price;
     }
 
+    //注册方法
     public void buy(Observer observer){
         observers.add(observer);
     }
 
+    //注销方法
     public void sell(Observer observer){
         observers.remove(observer);
     }

@@ -10,10 +10,12 @@ public class Book {
         this.price = price;
     }
 
+    //注入一个折扣类对象
     public void setDiscount(Discount discount) {
         this.discount = discount;
     }
 
+    //调用折扣类的计价方法
     public void calculatePrice(){
         discount.calculator(this.price);
     }

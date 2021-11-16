@@ -7,6 +7,12 @@ import com.demo.Question1.products.interfaces.Music;
 import com.demo.Question1.products.interfaces.Weather;
 import com.demo.Util.XMLUtil;
 
+/**
+ * 假设一个联机游戏中有多种游戏场景，
+ * 需要为每一个游戏场景，
+ * 创建不同的地形图、不同的背景音乐、不同的天气现象等实例对象。
+ * 请设计一个程序，使用抽象工厂模式实现该程序的设计。
+ * */
 public class Client {
 
     public static void main(String[] args) {

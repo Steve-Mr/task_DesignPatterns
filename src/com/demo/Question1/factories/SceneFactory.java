@@ -5,7 +5,10 @@ import com.demo.Question1.products.interfaces.Music;
 import com.demo.Question1.products.interfaces.Weather;
 
 public interface SceneFactory {
-    public Map createMap();
-    public Music createMusic();
-    public Weather createWeather();
+    Map createMap();
+    //地形图
+    Music createMusic();
+    //背景音乐
+    Weather createWeather();
+    //天气
 }

@@ -8,6 +8,12 @@ import com.demo.Question2.subjects.Stock;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 某在线股票软件需要提供如下功能：
+ * 当股票购买者购买的某只股票价格变化幅度达到5%时，
+ * 系统将自动发送通知（包括新价格）给购买该股票的股民。
+ * 现使用观察者模式设计该系统。
+ * */
 public class Client {
     public static void main(String[] args) {
         Stock AAPL;
@@ -19,12 +25,14 @@ public class Client {
         buyer2 = new Buyer("李四");
         AAPL.buy(buyer2);
         buyer3 = new Buyer("王五");
+        AAPL.buy(buyer3);
 
         List<Integer> priceList =
                 Arrays.asList(100, 105, 100, 101, 102, 99, 94);
 
-        for (double price : priceList){
-            AAPL.alert(price);
+        for (int i = 0; i < priceList.size(); i++){
+            if (i == 3) AAPL.sell(buyer2);
+            AAPL.alert(priceList.get(i));
         }
     }
 }
