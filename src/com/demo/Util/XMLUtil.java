@@ -1,4 +1,4 @@
-package com.demo.Question4.Util;
+package com.demo.Util;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -9,13 +9,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
 public class XMLUtil {
-    public static Object getBean() {
+    public static Object getBean(String filePath) {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder;
         try {
             documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document;
-            document = documentBuilder.parse(new File("src/com/demo/Question4/config.xml"));
+            document = documentBuilder.parse(new File(filePath));
 
             NodeList nodeList = document.getElementsByTagName("className");
             Node classNode = nodeList.item(0).getFirstChild();

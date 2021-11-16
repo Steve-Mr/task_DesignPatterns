@@ -5,6 +5,7 @@ import com.demo.Question1.factories.concrete.EasySceneFactory;
 import com.demo.Question1.products.interfaces.Map;
 import com.demo.Question1.products.interfaces.Music;
 import com.demo.Question1.products.interfaces.Weather;
+import com.demo.Util.XMLUtil;
 
 public class Client {
 
@@ -24,6 +25,16 @@ public class Client {
         music.play();
         weather.display();
 
+        sceneFactory = (SceneFactory) XMLUtil.getBean("src/com/demo/Question1/config.xml");
+        if (sceneFactory != null) {
+            map = sceneFactory.createMap();
+            music = sceneFactory.createMusic();
+            weather = sceneFactory.createWeather();
+        }
+
+        map.display();
+        music.play();
+        weather.display();
     }
 
 }

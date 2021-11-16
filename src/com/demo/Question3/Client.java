@@ -4,6 +4,7 @@ import com.demo.Question3.Strategies.Discount;
 import com.demo.Question3.Strategies.discountComputerBook;
 import com.demo.Question3.Strategies.discountLanguageBook;
 import com.demo.Question3.Strategies.discountNovelBook;
+import com.demo.Util.XMLUtil;
 
 public class Client {
 
@@ -25,7 +26,7 @@ public class Client {
         book.calculatePrice();
 
 
-        discount = new discountNovelBook();
+        discount = (Discount) XMLUtil.getBean("src/com/demo/Question3/config.xml");
         book.setDiscount(discount);
         book.calculatePrice();
     }

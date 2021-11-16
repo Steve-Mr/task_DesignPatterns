@@ -5,11 +5,7 @@ import com.demo.Question4.Participants.Student;
 import com.demo.Question4.Participants.Teacher;
 import com.demo.Question4.Awards.Award;
 import com.demo.Question4.Awards.researchAward;
-import com.demo.Question4.Awards.teachingAward;
-import com.demo.Question4.Util.XMLUtil;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import com.demo.Util.XMLUtil;
 
 public class Client {
 
@@ -32,7 +28,7 @@ public class Client {
         award = new researchAward();
         participantsList.accept(award);
 
-        award = (Award)XMLUtil.getBean();
+        award = (Award)XMLUtil.getBean("src/com/demo/Question4/config.xml");
         participantsList.accept(award);
 
     }
