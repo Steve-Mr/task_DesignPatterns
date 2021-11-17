@@ -1,5 +1,7 @@
 package com.demo.Question2.observers;
 
+import com.demo.Question2.subjects.Stock;
+
 public interface Observer {
-    void update(String stockName, double percent, double price);
+    void update(Stock stock);
 }

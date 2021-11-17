@@ -5,6 +5,8 @@ import com.demo.Question3.Strategies.discountComputerBook;
 import com.demo.Question3.Strategies.discountLanguageBook;
 import com.demo.Util.XMLUtil;
 
+import java.util.Arrays;
+
 /**
  * 有一个网上书店，
  * 该系统中所有的计算机类图书(ComputerBook)每本都有15%的折扣，
@@ -17,10 +19,15 @@ public class Client {
     public static void main(String[] args) {
         Book book = new Book();
         double originalPrice = 251.6;
+        double[] originalPrices = {15, 25, 10, 50, 40, 15.2};
 
-        book.setPrice(originalPrice);
-        System.out.println("Original Price: " + originalPrice);
-
+        book.setPrice(originalPrices);
+        double sum = 0.0;
+        for (double price: originalPrices){
+            sum += price;
+        }
+        System.out.println("每本价格为: " + Arrays.toString(originalPrices));
+        System.out.println("总价格: " + sum);
 
         Discount discount;
         discount = new discountComputerBook();
@@ -30,7 +37,6 @@ public class Client {
         discount = new discountLanguageBook();
         book.setDiscount(discount);
         book.calculatePrice();
-
 
         discount = (Discount) XMLUtil.getBean("src/com/demo/Question3/config.xml");
         book.setDiscount(discount);

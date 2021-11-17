@@ -10,6 +10,7 @@ public class ConcreteStock extends Stock {
 
     @Override
     public void alert(double price) {
+        this.price = price;
         if (peak == 0.0) peak = price;
         if (pre_price == 0.0) pre_price = price;
         // 若 peak 和 pre_price 值为 0.0，则尚未赋值
@@ -49,7 +50,7 @@ public class ConcreteStock extends Stock {
         if (percent >= 0.05 || percent <= -0.05){
             peak = price;
             for(Object buyer : observers){
-                ((Buyer) buyer).update(stockName, percent, price);
+                ((Buyer) buyer).update(this);
             }
         }
         return percent;

@@ -13,7 +13,6 @@ public abstract class Stock {
     protected double price;
     protected boolean FLAG = true;
     protected double percent;
-
     /*
      * peak: 极值点（极大和极小）
      * pre_price：上一次输入价格
@@ -24,8 +23,12 @@ public abstract class Stock {
         this.stockName = stockName;
     }
 
-    public void setPrice(double price){
-        this.price = price;
+    public String getStockName() {
+        return stockName;
+    }
+
+    public double getPercent() {
+        return percent;
     }
 
     public double getPrice(){

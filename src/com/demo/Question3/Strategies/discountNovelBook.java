@@ -2,7 +2,11 @@ package com.demo.Question3.Strategies;
 
 public class discountNovelBook extends Discount{
     @Override
-    public void calculator(double price) {
-        System.out.println("Novel Book, " + (price - ((int)(price / 100) * 20)));
+    public void calculator(double[] prices) {
+        double sum = 0.0;
+        for(double price: prices){
+            sum += price;
+        }
+        System.out.println("文艺小说类图书总价, " + (sum - ((int)(sum / 100) * 20)));
     }
 }
