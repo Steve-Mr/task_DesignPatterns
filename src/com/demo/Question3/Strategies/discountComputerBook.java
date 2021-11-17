@@ -1,6 +1,6 @@
 package com.demo.Question3.Strategies;
 
-public class discountComputerBook extends Discount{
+public class discountComputerBook implements Discount{
     @Override
     public void calculator(double[] prices) {
         double sum = 0.0;

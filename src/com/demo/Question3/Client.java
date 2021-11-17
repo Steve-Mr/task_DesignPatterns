@@ -18,7 +18,6 @@ public class Client {
 
     public static void main(String[] args) {
         Book book = new Book();
-        double originalPrice = 251.6;
         double[] originalPrices = {15, 25, 10, 50, 40, 15.2};
 
         book.setPrice(originalPrices);

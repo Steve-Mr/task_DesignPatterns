@@ -31,7 +31,10 @@ public class Client {
                 Arrays.asList(100, 105, 100, 101, 102, 99, 94);
 
         for (int i = 0; i < priceList.size(); i++){
-            if (i == 3) AAPL.sell(buyer2);
+            if (i == 3) {
+                AAPL.sell(buyer2);
+                System.out.println("李四已卖出 AAPL 股票");
+            }
             AAPL.alert(priceList.get(i));
         }
     }

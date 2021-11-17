@@ -44,7 +44,7 @@ public class ConcreteStock extends Stock {
      * 更新 pre_price 值
      * 若价格变化幅度超过 5% 则通知购买者
      * */
-    double judge(double price, double base){
+    private double judge(double price, double base){
         double percent = (price - base)/base;
         pre_price = price;
         if (percent >= 0.05 || percent <= -0.05){

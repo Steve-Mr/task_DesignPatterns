@@ -1,5 +1,5 @@
 package com.demo.Question3.Strategies;
 
-public abstract class Discount {
-    public abstract void calculator(double[] prices);
+public interface Discount {
+    void calculator(double[] prices);
 }
